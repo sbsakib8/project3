@@ -45,3 +45,6 @@
 .tabs_wrap ul li.active{
        @apply bg-secondaryColor text-blackColor;
 }
+p{
+    display: block;
+}
