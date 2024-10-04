@@ -59,33 +59,63 @@ tabs.forEach(tap =>{
     })
 })
 // ++++++++++++++++menu section end+++++++++++++++++++
-// swiper js
+
+
+// ===============  scroll up  section start=======================
+const scrollUp = ()=>{
+  const scollUpbtn = document.getElementById('scrollbtn');
+   if(this.scrollY >= 250){
+    scollUpbtn.classList.remove('-bottom-1/2');
+    scollUpbtn.classList.add('bottom-4');
+   }else{
+    scollUpbtn.classList.add('-bottom-1/2');
+    scollUpbtn.classList.remove('bottom-4');
+   }
+
+}
+addEventListener('scroll',scrollUp)
+
+
+const header = ()=>{
+  const headerbtn = document.getElementById('headerbtn');
+   if(this.scrollY >= 50){
+   headerbtn.classList.add('border-b','border-secondaryColor');
+   }else{
+    headerbtn.classList.remove('border-b','border-secondaryColor');
+   }
+
+};
+addEventListener('scroll',header)
+
+
+
+// swiper js ++++++++++++++++++++++++++++++
 const swiper = new Swiper('.swiper', {
-    speed: 400,
-  spaceBetween: 100,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction:false
+  speed: 400,
+spaceBetween: 100,
+autoplay: {
+  delay: 3000,
+  disableOnInteraction:false
+},
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable:true
   },
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-      clickable:true
-    },
-    grabCursor:true,
-     // Responsive breakpoints
-  breakpoints: {
-    // when window width is >= 640px
-    640: {
-      slidesPerView: 1,
-    },
-    // when window width is >= 768px
-    768: {
-      slidesPerView: 2,
-    },
-    // when window width is >= 1024px
-    1024: {
-      slidesPerView: 3,
-    }
-  } 
-  });
+  grabCursor:true,
+   // Responsive breakpoints
+breakpoints: {
+  // when window width is >= 640px
+  640: {
+    slidesPerView: 1,
+  },
+  // when window width is >= 768px
+  768: {
+    slidesPerView: 2,
+  },
+  // when window width is >= 1024px
+  1024: {
+    slidesPerView: 3,
+  }
+} 
+});
