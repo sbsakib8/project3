@@ -87,6 +87,35 @@ const header = ()=>{
 };
 addEventListener('scroll',header)
 
+// +++++++++++++start dark mode+++++++++++++
+ const html = document.querySelector('html');
+ const themebtn = document.getElementById("theme-toggle");
+
+ if(localStorage.getItem("mode")== "dark"){
+      darkMode();
+ }else{
+  lightMode();
+ }
+   
+ themebtn.addEventListener('click', (e)=>{
+  if(localStorage.getItem("mode")== "light"){
+     darkMode();
+  }else{
+    lightMode();
+  }
+ })
+//  darkmode
+ function darkMode(){
+  html.classList.add("dark");
+  themebtn.classList.replace("ri-moon-line", "ri-sun-line");
+  localStorage.setItem("mode","dark");
+ }
+// lightmode
+function lightMode(){
+  html.classList.remove("dark");
+  themebtn.classList.replace("ri-sun-line", "ri-moon-line");
+  localStorage.setItem("mode","light");
+ }
 
 
 // swiper js ++++++++++++++++++++++++++++++
