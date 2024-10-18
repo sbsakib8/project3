@@ -117,6 +117,52 @@ function lightMode(){
   localStorage.setItem("mode","light");
  }
 
+// active link start
+const activeLink = ()=>{
+  const sections = document.querySelectorAll('section');
+  const navLink = document.querySelectorAll('.navlink');
+
+  let current = 'home';
+  sections.forEach(section =>{
+    const sectionTop = section.offsetTop;
+
+    if(this.scrollY >= sectionTop - 60){
+         current = section.getAttribute('id');
+
+    }
+  });
+
+  navLink.forEach((itme)=>{
+    itme.classList.remove('text-secondaryColor');
+    if(itme.href.includes(current)){
+      itme.classList.add('text-secondaryColor');
+    }
+
+  })
+
+}
+window.addEventListener('scroll',activeLink)
+// active link end
+// =======================
+// scroll reveal animation start
+const sr= ScrollReveal({
+  origin: 'top',
+  distance:'60px',
+  duration:2500,
+  delay:300
+})
+sr.reveal(".home_img");
+sr.reveal(".home_content",{origin:'bottom'});
+sr.reveal(".category_card",{origin:'left'});
+sr.reveal(".promo_card1",{origin:'right'});
+sr.reveal(".promo_card2",{origin:'left'});
+sr.reveal(".about_ing",{origin:'top'});
+sr.reveal(".about_card",{origin:'bottom'});
+sr.reveal(".item_wrap",{origin:'right'});
+sr.reveal(".swiper",{origin:'left'});
+sr.reveal(".contact",{origin:'bottom'});
+sr.reveal(".footer",{origin:'top'});
+
 
 // swiper js ++++++++++++++++++++++++++++++
 const swiper = new Swiper('.swiper', {

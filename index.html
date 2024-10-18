@@ -36,7 +36,7 @@
     <div class=" hidden absolute top-0 left-0 w-full py-14 bg-primaryColor dark:bg-darkColor border-b border-secondaryColor md:block md:static md:py-0 md:border-none md:w-auto md:ml-auto" id="nav-manu">
         <ul class="flex flex-col gap-5 text-center md:flex-row">
             <li>
-                <a href="#home" class=" navlink hover:text-secondaryColor  ease-in duration-200">Home</a>
+                <a href="#home" class=" navlink text-secondaryColor hover:text-secondaryColor  ease-in duration-200">Home</a>
             </li>
             <li>
                 <a href="#about" class="navlink hover:text-secondaryColor ease-in duration-200">About</a>
@@ -71,9 +71,9 @@
 <section id="home">
    <div class="container flex flex-col items-center gap-10 md:flex-row">
     <div class="mx-auto md:basis-1/2 lg:basis-2/5 animate-movingY">
-        <img src="img/home-image.png" alt="home img" class="w-60 md:w-full">
+        <img src="img/home-image.png" alt="home img" class="home_img w-60 md:w-full">
     </div>
-    <div class="text-center md:basis-1/2 md:text-start lg:basis-3/5 ">
+    <div class="home_content text-center md:basis-1/2 md:text-start lg:basis-3/5 ">
         <h1 class="home_title">HAPPY TUMMY WITH TASTY BURGERS.</h1>
         <div class="separetor mx-auto md:mx-0"></div>
         <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad perferendis quisquam in neque accusantium voluptates iusto officiis cupiditate officia similique in neque accusantium voluptates iusto officiis cupiditate officia similique.</p>
@@ -108,7 +108,7 @@
 <section id="category">
      <div class="container flex flex-col gap-5 md:flex-row">
         <!-- card 1 -->
-         <div class="bg-secondaryColor flex py-3 rounded-lg overflow-hidden md:flex-1">
+         <div class="category_card bg-secondaryColor flex py-3 rounded-lg overflow-hidden md:flex-1">
             <div class="basis-1/3 relative">
                 <img src="img/burger-1.png" alt="category img" class="absolute w-28 -bottom-4 hover:animate-movingY">
             </div>
@@ -122,7 +122,7 @@
          </div>
 
          <!-- card 2 -->
-         <div class="bg-greenColor flex py-3 rounded-lg overflow-hidden md:flex-1">
+         <div class="category_card bg-greenColor flex py-3 rounded-lg overflow-hidden md:flex-1">
             <div class="basis-1/3 relative">
                 <img src="img/beverage-2.png" alt="category img" class="absolute w-28 -bottom-4 hover:animate-movingY">
             </div>
@@ -136,7 +136,7 @@
          </div>
 
          <!-- card 3 -->
-         <div class="bg-redColor flex py-3 rounded-lg overflow-hidden md:flex-1">
+         <div class="category_card bg-redColor flex py-3 rounded-lg overflow-hidden md:flex-1">
             <div class="basis-1/3 relative">
                 <img src="img/snack-1.png" alt="category img" class="absolute w-28 -bottom-4 hover:animate-movingY">
             </div>
@@ -158,7 +158,7 @@
   <section id="promo">
     <div class="container flex flex-col gap-5 lg:gap-10 lg:flex-row">
         <!-- card 1 -->
-         <div class="bg-primaryColorlight dark:bg-darkColorlight flex flex-col p-5 rounded-lg md:flex-row md:items-center lg:flex-row-reverse lg:flex-1">
+         <div class="promo_card1 bg-primaryColorlight dark:bg-darkColorlight flex flex-col p-5 rounded-lg md:flex-row md:items-center lg:flex-row-reverse lg:flex-1">
             <img src="img/promo-1.png" alt=" promo img" class="w-40 mx-auto hover:animate-movingY  md:mx-5">
             <div class="space-y-2 pt-5 md:pt-0">
                 <p class="text-xs text-secondaryColor">payday promo</p>
@@ -169,7 +169,7 @@
          </div>
 
          <!-- card 2 -->
-         <div class="bg-primaryColorlight dark:bg-darkColorlight flex flex-col p-5 rounded-lg md:flex-row md:items-center lg:flex-row-reverse lg:flex-1">
+         <div class="promo_card2 bg-primaryColorlight dark:bg-darkColorlight flex flex-col p-5 rounded-lg md:flex-row md:items-center lg:flex-row-reverse lg:flex-1">
             <img src="img/promo-2.png" alt=" promo img" class="w-40 mx-auto hover:animate-movingY md:mx-5">
             <div class="space-y-2 pt-5 md:pt-0">
                 <p class="text-xs text-secondaryColor">payday promo</p>
@@ -190,10 +190,10 @@
   <section id="about">
       <div class="container flex flex-col gap-10 md:flex-row">
           <div class="flex-1">
-              <img src="img/about.jpg" alt="about img" class="rounded-lg">
+              <img src="img/about.jpg" alt="about img" class="about_ing rounded-lg">
             </div>
-            
-            <div class="flex-1">
+            <!-- about card -->
+            <div class="flex-1 about_card">
                 <h2 class="section_title">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h2>
                 <div class="separetor md:mx-0"></div>
                 <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia accusamus fugit autem. Iure commodi, quod debitis ab quia, provident, ducimus magni minima ratione nesciunt repellat accusamus? Perferendis eveniet alias in!</p>
@@ -580,7 +580,7 @@
 <!-- +++++++++++++++++++++++++++++++++++++++++ -->
   <!--++++++++++contact section start+++++++++++++ -->
 <section id="contact" class="bg-secondaryColor py-16">
-    <div class="container flex flex-col gap-5 md:items-center md:flex-row">
+    <div class="contact container flex flex-col gap-5 md:items-center md:flex-row">
         <div class="space-y-4 md:flex-1">
             <h2 class="section_title text-blackColor"> GET EXCLUSIVE UPDATE</h2>
             <p class="text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente fuga impedit pariatur!</p>
@@ -693,7 +693,8 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
-
+<!-- scrollrevel -->
+<script src="https://unpkg.com/scrollreveal"></script>
 <!-- js file link  -->
 <script src="index.js"></script>
 </body>
